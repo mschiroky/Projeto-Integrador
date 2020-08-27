@@ -1,0 +1,13 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #b8b8b8e8;
+}
+
+.page-footer .container ul li {
+  list-style-type: none;
+}

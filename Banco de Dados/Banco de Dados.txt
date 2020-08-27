@@ -1,0 +1,27 @@
+// BAnco do Local HOST
+
+CREATE DATABASE trabalho;
+
+use trabalho;
+
+CREATE TABLE login(
+    id_usuario int NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    email varchar(64) NOT NULL,
+    senha varchar(64) NOT NULL
+);
+
+CREATE TABLE cadastro(
+    id_pessoa int NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    nome varchar(64) NOT NULL,
+    id_usuario int,
+    FOREIGN KEY(id_usuario) REFERENCES login(id_usuario)
+);
+
+CREATE TABLE contato(
+    id_contato int NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    nome varchar(64) NOT NULL,
+    email varchar(64) NOT NULL,
+    duvida char(2) NOT NULL,
+    comentario varchar(255)
+);
+
